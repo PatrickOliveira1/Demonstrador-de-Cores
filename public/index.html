@@ -11,16 +11,25 @@
         <h1>Demonstrador de Cores</h1>
         <p>Escolha as cores que deseja combinar</p>
         <p>A principal diferença é que RGB (Vermelho, Verde, Azul) é um modelo de cor luz (aditivo) usado em telas (TVs, celulares), onde a mistura das três gera branco, enquanto RYB (Vermelho, Amarelo, Azul) é um modelo de cor pigmento (subtrativo), tradicionalmente ensinado para artistas, onde a mistura das três gera tons escuros/marrons, e é aplicado em pintura e tintas. RGB é para luz (emite), RYB é para tinta (reflete). </p>
+        <input type="radio" name="colorModel" id="rgb" checked> RGB
+        <input type="radio" name="colorModel" id="ryb"> RYB
     </div>
     <div class="choose-colors">
-        <div id="color-1" class="colors"></div>
-        <div id="color-2" class="colors"></div>
-        <div id="color-3" class="colors"></div>
-        <div id="color-4" class="colors"></div>
-        <div id="color-5" class="colors"></div>
-        <div id="color-6" class="colors"></div>
-        <div id="color-7" class="colors"></div>
+        <button id="color-1" class="colors"></button>
+        <button id="color-2" class="colors"></button>
+        <button id="color-3" class="colors"></button>
+        <button id="color-4" class="colors"></button>
+        <button id="color-5" class="colors"></button>
+        <button id="color-6" class="colors"></button>
+        <button id="color-7" class="colors"></button>
     </div>
+    <h2>
+        Resultado da combinação:
+    </h2>
     <div class="color-result"></div>
+
+    <script src="src/ui.js"></script>
+    <script src="src/names.js"></script>
+    <script src="src/mixers.js"></script>
 </body>
 </html>
