@@ -14,22 +14,13 @@
         <input type="radio" name="colorModel" id="rgb" checked> RGB
         <input type="radio" name="colorModel" id="ryb"> RYB
     </div>
-    <div class="choose-colors">
-        <button id="color-1" class="colors"></button>
-        <button id="color-2" class="colors"></button>
-        <button id="color-3" class="colors"></button>
-        <button id="color-4" class="colors"></button>
-        <button id="color-5" class="colors"></button>
-        <button id="color-6" class="colors"></button>
-        <button id="color-7" class="colors"></button>
-    </div>
+    <div class="choose-colors" id="color-palette"></div>
     <h2>
         Resultado da combinação:
     </h2>
     <div class="color-result"></div>
+    <button id="reset-btn">Limpar Seleção</button>
 
-    <script src="src/ui.js"></script>
-    <script src="src/names.js"></script>
-    <script src="src/mixers.js"></script>
+    <script type="module" src="../src/ui.js"></script>
 </body>
 </html>

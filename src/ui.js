@@ -1,4 +1,5 @@
 import { mixRGB, mixRYB } from './mixers.js';
+import {renderColors} from './names.js';
 
 let selectedColor1 = null;
 let selectedColor2 = null;
@@ -23,13 +24,14 @@ function highlightColor() {
         box.classList.add('color2');
         phase = 3;
 
-        const result = mixRgb(selectedColor1, selectedColor2);
+        const result = mixRGB(selectedColor1, selectedColor2);
         const resultCss = `rgb(${result.r}, ${result.g}, ${result.b})`;
         document.querySelector('.color-result').style.backgroundColor = resultCss;
       } else {
         selectedColor1 = null;
         selectedColor2 = null;
         colorBoxes.forEach(b => b.classList.remove('color1', 'color2'));
+        document.querySelector('.color-result').style.backgroundColor = '';
         phase = 1;
       }
     });
@@ -45,4 +47,18 @@ function parseRgbString(rgbString) {
   };
 }
 
+function reset() {
+  document.getElementById('reset-btn').addEventListener('click', () => {
+  selectedColor1 = null;
+  selectedColor2 = null;
+  phase = 1;
+  
+  const colorBoxes = document.querySelectorAll('.colors');
+  colorBoxes.forEach(b => b.classList.remove('color1', 'color2'));
+  document.querySelector('.color-result').style.backgroundColor = '';
+  });
+}
+
+renderColors();
 highlightColor();
+reset();
