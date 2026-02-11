@@ -92,3 +92,13 @@ h2 {
 #reset-btn:hover {
     background-color: #cc0000;
 }
+
+input[type="radio"] {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: #0066cc;
+}
